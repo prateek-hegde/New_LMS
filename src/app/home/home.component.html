@@ -1,0 +1,206 @@
+<app-header></app-header>
+<app-preloader></app-preloader>
+<div class="header-image">
+  <div class="overlay"></div>
+  <div class="header-content container">
+    <h1 class="title text-center">
+      <span class="title-border">In The Lead to Succeed</span>
+    </h1>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="filter wrapper rounded filter-section">
+        <div class="body-section">
+          <!-- <h3>Filter here</h3>
+          <hr> -->
+          <div class="filter-measures">
+            <ul>
+              <li>
+                <button class="filter-pills filter-pills-button" (click)="clickf(i);" *ngFor="let item of categorywisefilters; let i=index">
+                  <i class=" filter-icons-active large material-icons pl-3">{{item.icon}}</i>
+                  <a class="filter-names">{{item.catname}}</a>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-9 col-sm-12">
+      <div class="filter wrapper rounded card-section">
+        <div class="body-section text-center">
+          <div class="pills-scroll">
+            <div class="pills-container">
+              <button [ngx-scroll-to]="item.move" [ngClass]="[item.colorname]" class="pills-button" (click)="clickp(i);" *ngFor="let item of sectionwisefilters; let i=index">
+                {{item.menu}}
+              </button>
+            </div>
+          </div>
+          <!-- <hr> -->
+        </div>
+        <div class="container-fluid">
+          <div class="main-body-wrapper" id="targetAll" #targetAll>
+            <h3 style="color:#f1592a">All</h3>
+            <hr>
+            <div class="card-outter">
+              <div class="card-container">
+                <div *ngFor="let card of cards" class="mycard">
+                  <div class="overlaywholecard">
+                    <div class="title-icon-div">
+                      <i class=" title-icons large material-icons pl-3">book</i>
+                      <i class=" title-icons large material-icons pl-3">share</i>
+                    </div>
+                    <button class="overlaywholecard-pills-active" (click)="selectedCourse(card._id)">View</button>
+                  </div>
+                  <div class="card-image">
+                    <div [ngClass] = 'card.overlaycard'></div>
+                    <img [src]="card.imageURL" />
+
+                  </div>
+                  <div class="card-save">
+                    <div class="card-title">
+                      <p [ngClass]= "card.color" class="title-class">{{card.courseName}}</p>
+                    </div>
+
+                  </div>
+                  <div class="card-description">
+                    {{card.description | slice:0:100}}...
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div id="targetAllBottom" #targetAllBottom></div>
+          </div>
+          <div class="main-body-wrapper" id="targetQuiz">
+            <h3 style="color:#bf1e2d">Quiz</h3>
+            <hr>
+            <div class="card-outter">
+              <div class="card-container">
+                <div *ngFor="let card of cards" class="mycard" #targetQuiz>
+                  <div class="overlaywholecard">
+                    <div class="title-icon-div">
+                      <i class=" title-icons large material-icons pl-3">book</i>
+                      <i class=" title-icons large material-icons pl-3">share</i>
+                    </div>
+                    <button routerLink="/detailpage" class="overlaywholecard-pills-active">View</button>
+                  </div>
+                  <div class="card-image">
+                    <div [ngClass] = 'card.overlaycardq'></div>
+                    <img [src]="card.imageURL" />
+                  </div>
+                  <div class="card-save">
+                    <div class="card-title">
+                      <p [ngClass]= "card.colorq" class="title-class">{{card.courseName}}</p>
+                    </div>
+
+                  </div>
+                  <div class="card-description">
+                    {{card.description | slice:0:100}}...
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="targetQuizBottom" #targetQuizBottom></div>
+          </div>
+          <div class="main-body-wrapper" id="targetCompetition" #targetCompetition>
+            <h3 style="color:#056839">Competition</h3>
+            <hr>
+            <div class="card-outter">
+              <div class="card-container">
+                <div *ngFor="let card of cards" class="mycard">
+                  <div class="overlaywholecard">
+                    <div class="title-icon-div">
+                      <i class=" title-icons large material-icons pl-3">book</i>
+                      <i class=" title-icons large material-icons pl-3">share</i>
+                    </div>
+                    <button class="overlaywholecard-pills-active">View</button>
+                  </div>
+                  <div class="card-image">
+                    <div [ngClass] = 'card.overlaycardc'></div>
+                    <img [src]="card.imageURL" />
+                  </div>
+                  <div class="card-save">
+                    <div class="card-title">
+                      <p [ngClass]= "card.colorc" class="title-class">{{card.courseName}}</p>
+                    </div>
+                  </div>
+                  <div class="card-description">
+                    {{card.description | slice:0:100}}...
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="targetCompetitionBottom" #targetCompetitionBottom></div>
+          </div>
+          <div class="main-body-wrapper" id="targetHackathon" #targetHackathon>
+            <h3 style="color:#283891">Hackathon</h3>
+            <hr>
+            <div class="card-outter">
+              <div class="card-container">
+                <div *ngFor="let card of cards" class="mycard">
+                  <div class="overlaywholecard">
+                    <div class="title-icon-div">
+                      <i class=" title-icons large material-icons pl-3">book</i>
+                      <i class=" title-icons large material-icons pl-3">share</i>
+                    </div>
+                    <button class="overlaywholecard-pills-active">View</button>
+                  </div>
+                  <div class="card-image">
+                    <div [ngClass] = 'card.overlaycardh'></div>
+                    <img [src]="card.imageURL" />
+                  </div>
+                  <div class="card-save">
+                    <div class="card-title">
+                      <p [ngClass]= "card.colorh" class="title-class">{{card.courseName}}</p>
+                    </div>
+
+                  </div>
+                  <div class="card-description">
+                    {{card.description | slice:0:100}}...
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="targetHackathonBottom" #targetHackathonBottom></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="filter-button-div">
+  <button (click)="openfilter()" class="filter-button">Filter</button>
+</div>
+<div class="filter wrapper rounded filter-section-mobile filter-section-mobile-close">
+  <div class="body-section">
+    <h3 style="display: inline">Filter here</h3>
+    <button (click)="closefilter()" class="pills-active-filter close-filter-button" style="right:2px;position:absolute"> X </button>
+    <hr>
+    <div class="filter-measures">
+      <ul>
+        <li>
+          <button class="filter-pills filter-pills-button-mobile" (click)="clickm(i);" *ngFor="let item of categorywisefilters; let i=index">
+            <i class=" filter-icons-active large material-icons pl-3">{{item.icon}}</i>
+            <a class="filter-names">{{item.catname}}</a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<div class="scroll-button-div">
+  <button [ngx-scroll-to]="'targetAll'" class="scroll-button">
+    <i class=" title-icons large material-icons ">expand_less</i>
+  </button>
+</div>

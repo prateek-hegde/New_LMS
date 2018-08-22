@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700%7CVarela+Round');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    font-family: 'Oxygen', sans-serif!important;
+    color: #707070; 
+    background: #ffffff;    
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Varela Round', sans-serif;
+}
+::-webkit-scrollbar{
+    height:10px;
+    width: 5px;
+}
+button{
+    cursor: pointer !important;
+}
+::-webkit-scrollbar-track{
+    background-color:transparent;
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgba(0, 0, 0, 0.74);
+    border-radius:50px;
+
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+
+label:focus,
+.btn:active,
+.btn.active,
+.form-control:focus,
+select:focus
+{
+    outline:0px !important;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0)!important;
+    -webkit-appearance:none!important;
+}
+/* #EC7B5E-gradient
+#EB4954-gradient-orange
+#box-shadow:0 3px 10px #000; --cards and buttons
+cards-border--#707070 
+cards-gradient--1st field-trans 2nd rgba(0,0,0,0.84)
+hover layer color-- rgba(36,33,33,0.69)
+height background img-300px;*/

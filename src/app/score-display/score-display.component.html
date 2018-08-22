@@ -1,0 +1,46 @@
+<div class="all-outer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="score-outter justify-content-center">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="heading">
+                <h3>Over All Score</h3>
+                <hr>
+              </div>
+              <div class="formid container">
+                <div class="text-center">
+                  <h6>Your Total Score is :</h6>
+                  <h1>{{totalScore}}</h1>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="heading">
+                <h3>Module Scores</h3>
+                <hr>
+              </div>
+              <div class="module-wrapper" *ngFor = "let item of moduleScore; let i = index">
+                <h6>Module {{i+1}}</h6>
+                <div class="progress-bar-outer">
+                  <div class="progress-bar-inner text-center"[style.width.%]="item">
+                    {{item}}%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-center p-5">
+                <button class="button-certi">Get Certifiacate</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,558 @@
+
+.header-image{
+    height:300px;
+    background-image:url('../../assets/log-Reg.jpg');
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+.header-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.card-title p{
+    color: white;
+    display: block;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 220px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    
+    background:linear-gradient(to top left,#d1d2d494,rgba(252, 252, 252, 0.69));
+}
+.title{
+    color:rgb(0, 0, 0);
+    font-weight: lighter;
+    font-family: 'Oxygen', sans-serif;
+}
+ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+.filter-names{
+    padding-left:19px;
+}
+.filter-section{
+    background-color:#fff;
+}
+.filter-measures{
+    padding-top:80px;
+    padding-left:2px;
+}
+.filter-measures button{
+    text-align:left;
+}
+.filter-icons{
+    position: absolute;
+    left:25px;
+    color:black; 
+}
+.filter-icons-active{
+    position: absolute;
+    left:25px;
+}
+.filter-pills-active{
+    background:linear-gradient(to left,rgba(236,123,94,0.9),rgba(235,73,84,0.9));
+    border: 1px  solid #EB4954;
+
+    padding: 13px 50px 13px 50px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    margin-bottom:12px;
+    width:100%;
+    position: relative;
+    transition: 0.5s all ease-in;
+}
+.filter-pills-active-nf{
+    background:#707070;
+    border: 1px  solid #707070;
+    padding: 13px 50px 13px 50px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    margin-bottom:12px;
+    width:100%;
+    position: relative;
+    transition: 0.5s all ease-in;
+}
+.filter-pills-active-o{
+    background:#f1592a;
+    border: 1px  solid #f1592a;
+
+    padding: 13px 50px 13px 50px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    margin-bottom:12px;
+    width:100%;
+    position: relative;
+    transition: 0.5s all ease-in;
+}
+.filter-pills-active-r{
+    background:#bf1e2d;
+    border: 1px  solid #bf1e2d;
+
+    padding: 13px 50px 13px 50px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    margin-bottom:12px;
+    width:100%;
+    position: relative;
+    transition: 0.5s all ease-in;
+}
+.filter-pills-active-b{
+    background:#283891;
+    border: 1px  solid #283891;
+
+    padding: 13px 50px 13px 50px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    margin-bottom:12px;
+    width:100%;
+    position: relative;
+    transition: 0.5s all ease-in;
+}
+.filter-pills-active-g{
+    background: #056839;
+    border: 1px  solid #056839;
+
+    padding: 13px 50px 13px 50px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    margin-bottom:12px;
+    width:100%;
+    position: relative;
+    transition: 0.5s all ease-in;
+}
+.filter-pills{
+    background:white;
+    border: 1px solid #707070 ;
+    padding: 13px 50px 13px 50px;
+    color: #707070;
+    border-radius: 50px;
+    margin-right:5px;
+    margin-bottom:12px;
+    width:100%;
+    position: relative;
+}
+.card-section{
+
+    background-color:#fff;
+}
+.wrapper{
+    margin-top:15px;
+    padding:10px;
+   
+}
+.body-section h3{
+    font-size:19px !important;
+    font-family: 'Oxygen', sans-serif;
+    font-weight:bold;
+    padding-top:10px;
+}
+.hr{
+    color:#707070;
+}
+
+.pills-active{
+    background:linear-gradient(to bottom left,rgba(236,123,94,0.9),rgba(235,73,84,0.9));
+    border: 1px  solid #EB4954;
+    padding: 3px 28px 3px 28px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    transition: 0.5s all ease-in;
+}
+.pills-active-o{
+    background:#f1592a;
+    border: 1px  solid #f1592a;
+    padding: 3px 28px 3px 28px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    transition: 0.5s all ease-in;
+}
+.pills-active-r{
+    background:#bf1e2d;
+    border: 1px  solid #bf1e2d;
+    padding: 3px 28px 3px 28px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    transition: 0.5s all ease-in;
+}
+.pills-active-g{
+    background:#056839;
+    border: 1px  solid #056839;
+    padding: 3px 28px 3px 28px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    transition: 0.5s all ease-in;
+}
+.pills-active-b{
+    background:#283891;
+    border: 1px  solid #283891;
+    padding: 3px 28px 3px 28px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    transition: 0.5s all ease-in;
+}
+.pills{
+    background:white;
+    border: 1px solid #EB4954 ;
+    padding: 3px 28px 3px 28px;
+    color: #EB4954;
+    border-radius: 50px;
+    margin-right:5px;
+    /* transition: 0.5s all ease-in; */
+}
+.pills-o{
+    background:white;
+    border: 1px solid #f1592a;
+    padding: 3px 28px 3px 28px;
+    color: #f1592a;
+    border-radius: 50px;
+    margin-right:5px;
+    /* transition: 0.5s all ease-in; */
+}
+.pills-b{
+    background:white;
+    border: 1px solid #283891;
+    padding: 3px 28px 3px 28px;
+    color: #283891;
+    border-radius: 50px;
+    margin-right:5px;
+    /* transition: 0.5s all ease-in; */
+}
+.pills-g{
+    background:white;
+    border: 1px solid #056839;
+    padding: 3px 28px 3px 28px;
+    color: #056839;
+    border-radius: 50px;
+    margin-right:5px;
+    /* transition: 0.5s all ease-in; */
+}
+.pills-r{
+    background:white;
+    border: 1px solid #bf1e2d;
+    padding: 3px 28px 3px 28px;
+    color: #bf1e2d;
+    border-radius: 50px;
+    margin-right:5px;
+    /* transition: 0.5s all ease-in; */
+}
+.main-body-wrapper h3{
+    font-size:19px !important;
+    font-family: 'Oxygen', sans-serif;
+    font-weight:bold;
+    padding-top:10px;
+}
+.card-outter{
+    overflow:scroll;
+    overflow-y:hidden; 
+    padding-bottom: 22px;
+    padding-left: 20px;
+}
+.card-outter::-webkit-scrollbar-thumb{
+    background-color:transparent;
+    transition: background-color 10s ease-in;
+}
+.card-outter:hover::-webkit-scrollbar-thumb{
+    background-color:rgba(201, 196, 196, 0.705);
+}
+.card-container{
+    display: inline-flex;
+}
+.mycard{
+    border: 1px solid #707070;
+    border-radius: 5px;
+    height: 350px;
+    width: 295px;
+    box-shadow: 0 3px 24px #6f6f6f;
+    margin-right:15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5 ease;
+}
+mycard:hover{
+    transform: scale(2.0);
+}
+.card-image{
+    height:30%;
+    /* background:url(../../assets/cardimage.jpg); */
+    padding:0;
+    margin:0;
+    border-radius:5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-y: -154px;
+}
+.card-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card-save{
+    /* height:18%; */
+    /* background:linear-gradient(to left,rgba(236,123,94,0.9),rgba(235,73,84,0.9)); */
+    background: white;
+}
+.card-title{
+    color:white;
+}
+.title-class{
+    text-transform: capitalize;
+    padding:10px;
+    font-weight: bolder
+}
+.title-class-orange{
+    color:#f1592a !important;
+}
+.title-class-red{
+    color:#bf1e2d !important;
+}
+.title-class-blue{
+    color:#283891 !important;
+}
+.title-class-green{
+    color:#056839 !important;
+}
+.title-icons{
+    padding: top 18px;
+    z-index:7;
+    font-size: 35px;
+}
+.card-description{
+    padding-right:10px;
+    padding-left: 10px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.overlaycard{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background:linear-gradient(to bottom ,rgba(255,255,255,0),rgba(0,0,0,0.72));
+}
+.overlaycard-orange{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background:#f1592ac4;
+}
+.overlaycard-red{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background:#bf1e2dc4;
+}
+.overlaycard-blue{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background:#283891c4;
+}
+.overlaycard-green{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background:#056839c4;
+}
+.overlaywholecard{
+    position:absolute;
+    width: 100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    z-index: 1;
+    opacity:0;
+    transition: opacity 0.2s ease-in;
+}
+.overlaywholecard button{
+    position: absolute;
+    bottom: 10px;
+    transform: translateY(100px);
+    transition: 0.2s all ease-in;
+    transition-delay: 0.1s;
+}
+.overlaywholecard-pills-active{
+    background: rgba(255, 255, 255, 0);
+    border: 3px solid #ffffff;
+    padding: 13px 50px 13px 50px;
+    color: white;
+    border-radius: 50px;
+    margin-right: 5px;
+    margin-bottom: 12px;
+    width: 63%;
+    font-size: 15px;
+    margin-left: 54px;
+
+}
+.mycard:hover .overlaywholecard{
+    opacity:1;
+}
+.mycard:hover .overlaywholecard button{
+    transform: translateY(0);
+}
+.mycard:hover .title-icons{
+    z-index:300;
+}
+.title-icon-div{
+    position: absolute;
+    color:white;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.filter-button-div{
+    display:none;
+}
+
+.filter-section-mobile{
+    display:none;
+}
+.pills-active-filter{
+    background: rgb(134, 129, 129);
+    border: 1px  solid rgb(151, 146, 146);
+    padding: 3px 28px 3px 28px;
+    color:white; 
+    border-radius: 50px;
+    margin-right:5px;
+    transition: 0.5s all ease-in;
+}
+.close-filter-button{
+    box-shadow: 0 3px 24px #70707047;
+}
+.fixed-side-filter{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 23%;
+    transform: translateY(0);
+    transition: 0.5s all ease-in;
+}
+.fixed-side-filter-close {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 23%;
+    transform: translateY(-100%);
+    transition: 0.5s all ease-in;
+}
+
+.scroll-button-div{
+    position: fixed;
+    bottom:40px;
+    right:50px;
+    z-index: 3;
+    transform: translateX(0%);
+    transition: 0.2s all ease-in;
+
+}
+.scroll-button{
+    border: 0;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    color: white;
+    background: rgb(134, 129, 129);
+}
+.no-scroll-button{
+    transform: translateX(300%);
+    transition: 0.2s all ease-in;
+
+}
+
+@media only screen and (max-width: 990px) {
+
+    .title{
+            font-size: 30px;
+    }
+    .pills-scroll{
+        overflow:scroll;
+        overflow-y:hidden; 
+        padding: 20px;
+    }
+    .filter-section{
+        display:none;
+    }
+    .filter-section-mobile-close{
+        transform:translateY(100%);
+        transition: 0.5s all ease-in;
+        visibility: hidden;
+    }
+    .filter-section-mobile-ani{
+        transform:translateY(0);
+        transition: 0.5s all ease-in;  
+    }
+    .filter-section-mobile{
+        display:block;
+        position: fixed;
+        top:0;
+        z-index: 4;
+        margin:0;
+        padding:10px;
+        background: #fff;
+        height:100%;
+    }
+    .pills-scroll::-webkit-scrollbar-thumb{
+        background-color:transparent;
+        transition: background-color 10s ease-in;
+    }
+    .pills-scroll:hover::-webkit-scrollbar-thumb{
+        background-color:rgba(201, 196, 196, 0.705);
+    }
+    .pills-container{
+        display: inline-flex;
+    }  
+    .filter-button-div{
+        display: block;
+        position: fixed;
+        bottom:12px;
+        right:25px;
+        z-index: 3;
+    }
+    .filter-button{
+        border:0;
+        border-radius:50px;
+        height:60px;
+        width:60px;
+        color:white;
+        background: rgb(134, 129, 129);
+    }
+    .scroll-button-div{
+        display:none;
+    }
+    .mycard{
+        border: 1px solid #707070;
+        border-radius: 5px;
+        height: 315px;
+        width: 255px;
+        box-shadow: 0 3px 24px #6f6f6f;
+        margin-right:15px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5 ease;
+    }
+}

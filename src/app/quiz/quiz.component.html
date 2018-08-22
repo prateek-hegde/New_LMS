@@ -1,0 +1,62 @@
+<div class="quiz-continer">
+  <div class="maincard">
+    <div class="maincardtitle">
+      <div class="row">
+        <div class="col-4">
+          <h4 class="text-left">Score:<span class="spaceclass"></span>{{score}}</h4>
+        </div>
+        <div class="col-4">
+          <h4 class="text-right"></h4>
+        </div>
+        <div class="col-4">
+          <h4 class="text-right">{{questionCounter + 1}}/{{qustionLength}}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="clock">
+      <img class="img-responsive timer" src="../assets/timer.png" alt="timer">
+      <div class="container">
+        <div class="counter">
+          <div class="text-center">
+            <h1>{{couter}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-card-body">
+      <div class="question-container">
+        <div class="question text-center pt-3">
+          <h6 style="text-transform:capitalize">{{currentQustion}}</h6>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div *ngIf="isimage" class="col-lg-6">
+            <div class="image-container text-center">
+              <img [src]=imageUrl>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="option-container text-center">
+              <ul class="list-unstyled options">
+                <div *ngFor="let item of currentOption; let i=index">
+                  <button *ngIf="item !== '' " (click)="check(i)" class="mylist dynamic{{i}}" [disabled]="disabled">
+                    {{item}}
+                  </button>
+                </div>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="skip" (click)="skip();">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h5 class="text-white p-2">Skip</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
