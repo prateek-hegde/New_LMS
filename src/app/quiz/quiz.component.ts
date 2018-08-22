@@ -38,7 +38,7 @@ export class QuizComponent implements OnInit {
   selectedCourseId: any;
   subject = new Subject();
   couter;
-  countDown = 14;
+  countDown = 200;
   currentModule;
   questionCounter;
   quizQustions = [];

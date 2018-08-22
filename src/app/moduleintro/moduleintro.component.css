@@ -22,7 +22,7 @@
     color:#fff;
     padding:15px 15px 15px 15px;
     font-weight:bolder;
-    background:linear-gradient(to left,rgba(236,123,94,0.9),rgba(235,73,84,0.9));
+    background:#bf1e2d;
     margin:0px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -52,14 +52,14 @@
     text-align: justify;
 }
 .startbutton{
-    background:linear-gradient(to left,rgba(236,123,94,0.9),rgba(235,73,84,0.9));
-    padding:10px;
-    color:#fff;
-    position: fixed;
-    bottom:0px;
+    padding: 10px;
+    color: #bf1e2d;
     font-weight: 700;
-    width:100%;
+    width: 30%;
+    margin: 0 auto;
     cursor: pointer;
+    border-radius: 50px;
+    border: 2px solid #bf1e2d;
 }
 video{
     width:100%;
@@ -75,5 +75,8 @@ video{
         left:50%;
         transform: translate(-50%,-50%);
         box-shadow: 0 3px 24px #70707047;
+    }
+    .startbutton{
+        width:39%;
     }
 }

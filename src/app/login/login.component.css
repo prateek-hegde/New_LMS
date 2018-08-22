@@ -28,6 +28,7 @@
     background-color: #fff;
     padding-left:10%;
     padding-right:10%;
+    margin-bottom:0px;
 
     /* box-shadow: 0 2px 8px #707070; */
 }
@@ -39,7 +40,7 @@
     padding-left: 30px;
     border:none;
     color: white;
-    background:linear-gradient(to bottom left,rgba(236,123,94,1),rgba(235,73,84,1));
+    background: rgb(226, 48, 57);
     box-shadow: 0 6px 14px #70707077;
 }
 .mytxt{

@@ -107,7 +107,7 @@
     padding: 20px;
 }
 .card-title{
-    background: linear-gradient(to  left,rgba(236,123,94,0.9),rgba(235,73,84,0.9));
+    background: #f1592a; 
     color: white;
     position: relative;
 }
@@ -122,6 +122,14 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+.start-course-button{
+    padding: 8px;
+    border: 2px solid #056839;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    background: #056839;
 }
 .myicons{
    position: absolute;
@@ -177,8 +185,16 @@
     transform: translate(-50%,-50%);
     border-radius: 20px;
 }
+.extradiv{
+    /* display:none; */
+    color:white;
+}
 
 @media only screen and (max-width: 990px) {
+    .extradiv{
+        height:50px;
+        color:white;
+    }
     .people-wrap {
         width: 100%;
         margin-top:-85px;
@@ -191,7 +207,21 @@
         bottom: 0;
         right: 0;
         position: fixed;
-        background: #007aff;
+        background: #056839;
+        /* padding: 8px;
+        border: 2px solid #056839;
+        border-radius: 50px;
+        color: white;
+        font-weight: 600;
+        background: #056839; */
+    }
+    .start-course-button{
+        padding: 8px;
+        border: 2px solid #056839;
+        border-radius: 50px;
+        color: white;
+        font-weight: 600;
+        background: #056839;
     }
     .payment-box {
         background-color: #fff;

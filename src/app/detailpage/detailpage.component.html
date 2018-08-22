@@ -19,9 +19,9 @@
     </div>
   </div>
   <div class="button-container text-center">
-    <button *ngIf="!payment" class="btn btn-primary" (click) = "hider()" (click)="openModel();">Take A Course for 200 Rs</button>
-    <button *ngIf="payment" class="btn btn-primary" (click)="navigatToNxt();"  [ngStyle]="{'display': disabled ? 'none' : 'initial','text-align':'center' }">Take A Course</button>
-    <button *ngIf="module_Completed" class="btn btn-primary" (click)="navigatToNxt();">Download Certificate</button>
+    <button *ngIf="!payment" class="start-course-button" (click) = "hider()" (click)="openModel();">Take A Course for 200 Rs</button>
+    <button *ngIf="payment" class="start-course-button" (click)="navigatToNxt();"  [ngStyle]="{'display': disabled ? 'none' : 'initial','text-align':'center' }">Take A Course</button>
+    <button *ngIf="module_Completed" class="start-course-button" (click)="navigatToNxt();">Download Certificate</button>
     <!-- <a href="http://localhost:4200/moduleintro?ct=0" class="btn btn-primary">Take A Course</a> -->
 
   </div>
@@ -109,9 +109,8 @@
         </div>
       </div>
     </div>
-
+    <div class="extradiv">abc</div>
   </div>
-
 </div>
 <div *ngIf="hide" style = "position: absolute;height:100%;width:100%;background:rgba(0,0,0,0.7);top:0;"></div>
 <div class="overlay-con overlay-wrapper-close">

@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background:linear-gradient(to bottom left,rgba(236,123,94,1),rgba(235,73,84,1));
+    background:white;
     z-index: 11000;
     top:0;
 }
@@ -15,13 +15,20 @@
 .loader img {
     width: 300px;
     animation: loader-blink 5s infinite;
+    opacity: 1;
+    position: relative;
 }
 
 @keyframes loader-blink {
-    0%   { opacity: 0; }
-    20% {opacity: 1;}
-    40% {opacity: 0;}
-    60% {opacity: 1;}
-    80% {opacity: 0;}
-    100% { opacity: 1; }
+    0%  {top:30px;}
+    10% {top:50px;}
+    20% {top:30px;}
+    30% {top:50px;}
+    40% {top:30px;}
+    50% {top:50px;}
+    60% {top:30px;}
+    70% {top:50px;}
+    80% {top:30px;}
+    90% {top:50px;}
+    100%{top:30px;}
   }

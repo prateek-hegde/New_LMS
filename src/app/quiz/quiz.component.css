@@ -22,10 +22,13 @@
     border-radius: 5px;
     overflow-y: scroll;
     overflow-x: hidden;
-    
 }
 .spaceclass{
     padding-right:10px;
+}
+.question-container{
+    margin-left:15px;
+    margin-right:15px;
 }
 .image-container img{
     height: 440px;
@@ -70,7 +73,7 @@ h6{
     color:#fff;
     padding:15px 15px 15px 15px;
     font-weight:bolder;
-    background:linear-gradient(to left,rgba(236,123,94,0.9),rgba(235,73,84,0.9));
+    background:#001a33;
     margin:0px;
 }
 .shortdescriptiondiv{
@@ -84,10 +87,16 @@ h6{
     text-align: justify;
 }
 .skip{
-    background: linear-gradient(to left,rgba(236,123,94,0.9),rgba(235,73,84,0.9));
-    position: sticky;
+    background:white;
+    position: relative;
+    color: #001a33;
+    margin:0 auto;
+    border: 2px solid #001a33;
     bottom: 0;
-    width: 100%;
+    width: 30%;
+    border-radius:50px;
+    cursor: pointer;
+
 }
 .startbutton{
     background:linear-gradient(to left,rgba(236,123,94,0.9),rgba(235,73,84,0.9));
@@ -211,7 +220,7 @@ h6{
         color:#fff;
         padding:9px 15px 7px 15px;
         font-size:13px;
-        background:linear-gradient(to left,rgba(236,123,94,0.9),rgba(235,73,84,0.9));
+        background:#001a33;
         margin:0px;
     }
     .questionimage{
@@ -231,5 +240,9 @@ h6{
         padding: 7px;
         margin: 10px;
         font-size:15px;
+    }
+    .question-container{
+        margin-left:2px;
+        margin-right:2px;
     }
 }

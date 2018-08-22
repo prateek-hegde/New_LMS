@@ -30,7 +30,7 @@
     top:0;
     width: 30%;
     box-shadow: 2px 0 20px #7070704f;
-    background-image:url('../../assets/Symbol.png');
+    /* background-image:url('../../assets/Symbol.png'); */
     overflow-y: scroll;
     overflow-x: hidden;
 
