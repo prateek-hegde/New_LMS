@@ -481,9 +481,29 @@ mycard:hover{
 .no-scroll-button{
     transform: translateX(300%);
     transition: 0.2s all ease-in;
-
 }
-
+.changingtext:before{
+    content: 'Internships';
+    color: #d9513200;
+    font-size: 50px;
+    animation-name: head;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+@keyframes head {
+    0%  {font-size:50px; opacity:0;}
+   10%  {font-size:50px; opacity:1; content:'Internships'; color:#d95232}
+   20%  {font-size:50px; opacity:0; }
+   30%  {font-size:50px; opacity:1; content:'Amazing Rewards'; color:#b62f2c}
+   40%  {font-size:50px; opacity:0;}
+   50%  {font-size:50px; opacity:1; content:'Scholarships'; color:#2e337f}
+   60%  {font-size:50px; opacity:0;}
+   70%  {font-size:50px; opacity:1; content:'Fun Goodies'; color:#306236}
+   80%  {font-size:50px; opacity:0;}
+   90%  {font-size:50px; opacity:1; content:'Exciting Prizes'; color:#b62f2c}
+   100% {font-size:50px; opacity:0;}
+}
 @media only screen and (max-width: 990px) {
 
     .title{
