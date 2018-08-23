@@ -38,17 +38,18 @@
         <div class="menu-contianer " >
           <ul>
             <li *ngFor="let item of myitem; let i=index" [routerLinkActive]="['active']">
-              <p [routerLink]=item.link>{{item.menu}}</p>
+              <p style="font-size:17px !important" [routerLink]=item.link>{{item.menu}}</p>
               <hr>
             </li>
-            <li *ngIf="userToken === null" routerLink="/login" style="cursor: pointer;">
+            <li *ngIf="userToken === null" routerLink="/login" style="cursor: pointer;font-size:17px !important">
               Log In
             </li>
-            <hr>
-            <li *ngIf="userToken === null" routerLink="/register" style="cursor: pointer;">
+            
+            <li *ngIf="userToken === null" routerLink="/register" style="cursor: pointer;font-size:17px !important;">
+              <hr>
               Sign Up
             </li>
-            <li *ngIf="userToken !== null" (click)="logout()" routerLink="/login" style="cursor: pointer;">
+            <li *ngIf="userToken !== null" (click)="logout()" routerLink="/login" style="cursor: pointer;font-size:17px !important;">
               Log Out
             </li>
             

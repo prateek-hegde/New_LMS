@@ -23,6 +23,7 @@
 }
 ul{
     margin-left:-23px;
+    cursor: pointer;
 }
 .footer-text-after::after{
     content: "";
@@ -52,6 +53,12 @@ ul{
     color: white;
     background: rgb(134, 129, 129);
     margin:5px;
+}
+li:focus
+{
+    outline:0px !important;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0)!important;
+    -webkit-appearance:none!important;
 }
 @media only screen and (max-width: 990px) {
     .logoimage{

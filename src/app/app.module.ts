@@ -31,6 +31,7 @@ import { GameComponentComponent } from './game-component/game-component.componen
 
 import {enableProdMode} from '@angular/core';
 import { CertificateComponent } from './certificate/certificate.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 
@@ -51,6 +52,7 @@ export const routes: Routes = [
   {path: 'game3' , component: Game3Component},
   {path: 'score' , component: ScoreDisplayComponent},
   {path: 'game' , component: GameComponentComponent},
+  {path: 'aboutus' , component: AboutusComponent}
 ];
 
 
@@ -74,6 +76,7 @@ export const routes: Routes = [
     PreloaderComponent,
     GameComponentComponent,
     CertificateComponent,
+    AboutusComponent,
 
   ],
   imports: [

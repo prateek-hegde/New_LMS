@@ -18,4 +18,7 @@ export class AppComponent implements OnInit {
     //   console.log(this.router.isActive('/login', false));
     // }
   }
+  onActivate(event) {
+    window.scroll(0, 0);
+}
 }
