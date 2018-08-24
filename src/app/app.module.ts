@@ -32,6 +32,7 @@ import { GameComponentComponent } from './game-component/game-component.componen
 import {enableProdMode} from '@angular/core';
 import { CertificateComponent } from './certificate/certificate.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { OurteamComponent } from './ourteam/ourteam.component';
 
 
 
@@ -52,7 +53,8 @@ export const routes: Routes = [
   {path: 'game3' , component: Game3Component},
   {path: 'score' , component: ScoreDisplayComponent},
   {path: 'game' , component: GameComponentComponent},
-  {path: 'aboutus' , component: AboutusComponent}
+  {path: 'aboutus' , component: AboutusComponent},
+  {path: 'ourteam' , component: OurteamComponent}
 ];
 
 
@@ -77,6 +79,7 @@ export const routes: Routes = [
     GameComponentComponent,
     CertificateComponent,
     AboutusComponent,
+    OurteamComponent,
 
   ],
   imports: [
