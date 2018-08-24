@@ -1,0 +1,22 @@
+<div class="maincard">
+  <div class="maincardtitlediv">
+    <h4 class="maincardtitle">{{quiz.name}}</h4>
+  </div>
+  <!-- <div *ngIf = "videopresent"> -->
+    <video *ngIf = "videopresent" class="maincardimagecontainer" controls>
+      <source class="maincardimage image-responsive" src="../assets/Final Pizza.mov" type="video/mp4"> Your browser does not support the video tag.
+    </video>
+  <!-- </div> -->
+  <div *ngIf = "!videopresent" class="maincardimagecontainer">
+    <img class="maincardimage img-responsive" [src]="quiz.image" alt="">
+  </div>
+  <div class="shortdescriptiondiv">
+    <h5 class="shortdescription">{{quiz.description}}</h5>
+  </div>
+  <div class="detailsdiv">
+    <p class="details">{{quiz.details}}</p>
+  </div>
+</div>
+<div routerLink = '/mainquiz' class="startbutton text-center">
+  Start Module 
+</div>
