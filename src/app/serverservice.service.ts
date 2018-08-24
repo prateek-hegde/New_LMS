@@ -17,7 +17,13 @@ export class ServerserviceService  implements OnInit {
   currentModuleCounter = 0;
   httpOptions;
   userToken;
+  Quizquestion: string;
+  mainQuizId: any;
+  mainQuizCounter = 0;
+  MainQuizScore = 0;
+  MainQuizName;
   readonly _rootUrl = 'http://13.232.94.128';
+  readonly local = 'http://192.168.0.2:3000';
   readonly _rootURL2 = 'http://13.232.94.128';
   constructor(private http: HttpClient ) { }
   getToken(): string {
@@ -44,6 +50,21 @@ export class ServerserviceService  implements OnInit {
   getcoursecarddetails() {
     return this.http.get(this.CourseDetailsUrl);
   }
+  // tslint:disable-next-line:member-ordering
+  QuizDetailsUrl = this.local + '/api/client/get-quiz';
+  getquizcarddetails() {
+    return this.http.get(this.QuizDetailsUrl);
+  }
+  sendQuizScore(data) {
+    console.log('shd');
+    console.log(data);
+    return this.http.post(this._rootUrl + '/api/client/post-quizScore', data);
+  }
+  getquizquestion(id) {
+    this.Quizquestion = this._rootUrl + '/api/client/get-quizDetails/' + id;
+    return this.http.get(this.Quizquestion);
+  }
+
   postLoginData(formdata) {
     console.log(formdata);
     return this.http.post(this._rootUrl + '/api/client/login', formdata);

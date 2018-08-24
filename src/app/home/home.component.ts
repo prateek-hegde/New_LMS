@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   card_image;
   card_title;
   flag = 0;
+  quiz = [];
   selectedIndex = 0;
   scrollflag = 0;
   card_description;
@@ -380,9 +381,42 @@ export class HomeComponent implements OnInit {
         this.renderer.setStyle(this.loader, 'display', 'none');
       }, 1500);
     });
+    this.serverservice.getquizcarddetails().subscribe((response: any) => {
+      for (const course of response) {
+        console.log(response);
+        this.quiz.push(course);
+      }
+      for (let i = 0; i < this.quiz.length; i++) {
+        if (i % 4 === 0) {
+          this.quiz[i].overlaycardq = 'overlaycard-red';
+          this.quiz[i].colorq = 'title-class-red';
+        }
+        if (i % 4 === 1) {
+          this.quiz[i].overlaycardq = 'overlaycard-blue';
+          this.quiz[i].colorq = 'title-class-blue';
+        }
+        if (i % 4 === 2) {
+          this.quiz[i].overlaycardq = 'overlaycard-green';
+          this.quiz[i].colorq = 'title-class-green';
+        }
+        if (i % 4 === 3) {
+          this.quiz[i].overlaycardq = 'overlaycard-orange';
+          this.quiz[i].colorq = 'title-class-orange';
+        }
+      }
+      setTimeout(() => {
+        this.renderer.setStyle(this.loader, 'display', 'none');
+      }, 1500);
+    });
+
   }
   selectedCourse(intro) {
     localStorage.setItem('courseId', intro);
     this.router.navigate(['/detailpage']);
+  }
+  viewQuiz(id, name)  {
+    this.serverservice.mainQuizId = id;
+    this.serverservice.MainQuizName = name;
+    console.log(this.serverservice.mainQuizId);
   }
 }

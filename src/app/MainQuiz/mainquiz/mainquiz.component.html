@@ -3,7 +3,8 @@
     <div class="maincardtitle">
       <div class="row">
         <div class="col-4">
-          <h4 class="text-left">Score:<span class="spaceclass"></span>{{score}}</h4>
+          <h4 class="text-left">Score:
+            <span class="spaceclass"></span>{{score}}</h4>
         </div>
         <div class="col-4">
           <h4 class="text-right"></h4>
@@ -37,24 +38,24 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div  class="option-container text-center">
+            <div class="option-container text-center">
               <ul class="list-unstyled options">
                 <div *ngFor="let item of currentOption; let i=index">
-                  <button *ngIf="item !== '' "  [ngClass]='optionClass' (click)="check(i)" class="mylist dynamic{{i}}" [disabled]="disabled">
+                  <button *ngIf="item !== '' " [ngClass]='optionClass' (click)="check(i)" class="mylist dynamic{{i}}" [disabled]="disabled">
                     {{item}}
                   </button>
                 </div>
 
               </ul>
             </div>
+            <div class="skip" (click)="skip();">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h5 style="margin: 5px !important">Skip</h5>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="skip" (click)="skip();">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h5 class="text-white p-2">Skip</h5>
         </div>
       </div>
     </div>

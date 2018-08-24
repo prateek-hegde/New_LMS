@@ -20,7 +20,7 @@ export class MainquizComponent implements OnInit {
   currentOption = [];
   subject = new Subject();
   couter;
-  countDown = 2;
+  countDown = 200;
   timer;
   data = [];
   qtimer: void;

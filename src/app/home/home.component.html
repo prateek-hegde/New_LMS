@@ -82,7 +82,7 @@
 
             <div id="targetAllBottom" #targetAllBottom></div>
           </div>
-          <div class="main-body-wrapper" id="targetQuiz">
+          <!-- <div class="main-body-wrapper" id="targetQuiz">
             <h3 style="color:#bf1e2d">Quiz</h3>
             <hr>
             <div class="card-outter">
@@ -112,7 +112,38 @@
               </div>
             </div>
             <div id="targetQuizBottom" #targetQuizBottom></div>
-          </div>
+          </div> -->
+          <div class="main-body-wrapper" id="targetQuiz">
+              <h3 style="color:#bf1e2d">Quiz</h3>
+              <hr>
+              <div class="card-outter">
+                <div class="card-container">
+                  <div *ngFor="let card of quiz" class="mycard" #targetQuiz>
+                    <div class="overlaywholecard">
+                      <div class="title-icon-div">
+                        <i class=" title-icons large material-icons pl-3">book</i>
+                        <i class=" title-icons large material-icons pl-3">share</i>
+                      </div>
+                      <button routerLink="/quizintro" (click)='viewQuiz(card._id, card.name)' class="overlaywholecard-pills-active">View</button>
+                    </div>
+                    <div class="card-image">
+                      <div [ngClass] = 'card.overlaycardq'></div>
+                      <img [src]="card.image" />
+                    </div>
+                    <div class="card-save">
+                      <div class="card-title">
+                        <p [ngClass]= "card.colorq" class="title-class">{{card.name}}</p>
+                      </div>
+  
+                    </div>
+                    <div class="card-description">
+                      {{card.description | slice:0:100}}...
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="targetQuizBottom" #targetQuizBottom></div>
+            </div>
           <div class="main-body-wrapper" id="targetCompetition" #targetCompetition>
             <h3 style="color:#056839">Competition</h3>
             <hr>

@@ -33,6 +33,11 @@ import {enableProdMode} from '@angular/core';
 import { CertificateComponent } from './certificate/certificate.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { OurteamComponent } from './ourteam/ourteam.component';
+import { IntroComponent } from './MainQuiz/intro/intro.component';
+import { MainquizComponent } from './MainQuiz/mainquiz/mainquiz.component';
+import { QuizscoreComponent } from './MainQuiz/quizscore/quizscore.component';
+import { OurclientsComponent } from './ourclients/ourclients.component';
+import { OurpartnersComponent } from './ourpartners/ourpartners.component';
 
 
 
@@ -54,7 +59,12 @@ export const routes: Routes = [
   {path: 'score' , component: ScoreDisplayComponent},
   {path: 'game' , component: GameComponentComponent},
   {path: 'aboutus' , component: AboutusComponent},
-  {path: 'ourteam' , component: OurteamComponent}
+  {path: 'ourteam' , component: OurteamComponent},
+  {path: 'ourclients' , component: OurclientsComponent},
+  {path: 'ourpartners' , component: OurpartnersComponent},
+  {path: 'quizintro', component: IntroComponent},
+  {path: 'mainquiz', component: MainquizComponent},
+  {path: 'quizscore', component: QuizscoreComponent},
 ];
 
 
@@ -80,6 +90,11 @@ export const routes: Routes = [
     CertificateComponent,
     AboutusComponent,
     OurteamComponent,
+    IntroComponent,
+    MainquizComponent,
+    QuizscoreComponent,
+    OurclientsComponent,
+    OurpartnersComponent,
 
   ],
   imports: [
