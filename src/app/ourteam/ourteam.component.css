@@ -55,11 +55,11 @@
     text-align: justify;
     font-size: 20px;
 }
-.imagediv{
+.flip-container{
     position: relative;
     margin-bottom: 30px;
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     display: block;
 }
@@ -69,11 +69,24 @@ img{
     margin-right: auto;
     width:100%;
 }
-img:hover{
-    opacity:0.6 !important;
+.overlaywholecard h5{
+    padding:5px;
 }
 .row{
     margin-bottom:35px;
+}
+.overlaywholecard{
+    position:absolute;
+    width: 100%;
+    height:100%;
+    background:linear-gradient(to bottom left,#0b5a88e7,#0e218abd);
+    z-index: 1;
+    opacity:0;
+    transition: opacity 0.2s ease-in;
+    color:#89eaf1;
+}
+.flip-container:hover .overlaywholecard{
+    opacity:1;
 }
 @media only screen and (max-width: 990px) {
 
