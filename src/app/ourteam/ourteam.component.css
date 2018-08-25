@@ -91,9 +91,20 @@ img{
     opacity:0;
     transition: opacity 0.2s ease-in;
     color:#89eaf1;
+    text-align: left;
 }
 .flip-container:hover .overlaywholecard{
     opacity:1;
+}
+.member-name{
+    font-size:35px;
+}
+h5{
+    font-size: 20px;
+    word-wrap: break-word;
+}
+.linkedin-h{
+    font-size:16px;
 }
 @media only screen and (max-width: 990px) {
 

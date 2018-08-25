@@ -291,6 +291,7 @@ ul{
     width: 295px;
     box-shadow: 0 3px 24px #6f6f6f;
     margin-right:15px;
+    margin-top: 15px;
     position: relative;
     overflow: hidden;
     transition: all 0.5 ease;
