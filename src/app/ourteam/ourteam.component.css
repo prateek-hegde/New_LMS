@@ -104,7 +104,10 @@ h5{
     word-wrap: break-word;
 }
 .linkedin-h{
-    font-size:16px;
+    font-size:25px;
+}
+a {
+    color: #80dce8;
 }
 @media only screen and (max-width: 990px) {
 
