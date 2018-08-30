@@ -1,4 +1,19 @@
-
+.additionclassall{
+    position:absolute;
+    top:20%;
+}
+.additionclassquiz{
+    position:absolute;
+    top:43%;
+}
+.additionclasscompetition{
+    position:absolute;
+    top:67%;
+}
+.additionclasshackathon{
+    position:absolute;
+    top:91%;
+}
 .header-image{
     height:300px;
     background-image:url('../../assets/log-Reg.jpg');
@@ -400,14 +415,14 @@ mycard:hover{
 .overlaywholecard-pills-active{
     background: rgba(255, 255, 255, 0);
     border: 3px solid #ffffff;
-    padding: 13px 50px 13px 50px;
+    padding: 5px 20px 5px 20px;
     color: white;
     border-radius: 50px;
     margin-right: 5px;
-    margin-bottom: 12px;
-    width: 63%;
+    margin-bottom: 40px;
+    width: 30%;
     font-size: 15px;
-    margin-left: 54px;
+    margin-left: 105px;
 
 }
 .mycard:hover .overlaywholecard{

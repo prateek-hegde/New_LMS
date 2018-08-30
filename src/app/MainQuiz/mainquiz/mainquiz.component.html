@@ -27,12 +27,12 @@
     <div class="main-card-body">
       <div class="question-container">
         <div class="question text-center pt-3">
-          <h6 style="text-transform:capitalize">{{currentQustion}}</h6>
+          <h6 style="text-transform:capitalize">{{currentQuestion}}</h6>
         </div>
       </div>
       <div class="container">
         <div class="row justify-content-center">
-          <div *ngIf="isimage" class="col-lg-6">
+          <div *ngIf="isImage" class="col-lg-6">
             <div class="image-container text-center">
               <img [src]=imageUrl>
             </div>
@@ -40,7 +40,7 @@
           <div class="col-lg-6">
             <div class="option-container text-center">
               <ul class="list-unstyled options">
-                <div *ngFor="let item of currentOption; let i=index">
+                <div *ngFor="let item of quizOptions; let i=index">
                   <button *ngIf="item !== '' " [ngClass]='optionClass' (click)="check(i)" class="mylist dynamic{{i}}" [disabled]="disabled">
                     {{item}}
                   </button>

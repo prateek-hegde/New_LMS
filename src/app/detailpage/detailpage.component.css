@@ -124,12 +124,22 @@
     text-overflow: ellipsis;
 }
 .start-course-button{
-    padding: 8px;
+    padding: 5px 15px 5px 15px;
     border: 2px solid #056839;
     border-radius: 50px;
     color: white;
     font-weight: 600;
     background: #056839;
+}
+.btn-dangere{
+    background:#ffffff00;
+    border:0px;
+    margin-right:-10px;
+    color:white;
+    font-weight: bolder;
+}
+.btn-dangere:hover{
+    background:#ffffff00;
 }
 .myicons{
    position: absolute;

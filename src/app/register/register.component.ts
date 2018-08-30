@@ -57,18 +57,27 @@ export class RegisterComponent implements OnInit {
         const data = form.value;
         console.log(form.value.dob);
         this.serverservice.postRegisterData(data).subscribe((response: any) => {
-          if (response.token) {
-            localStorage.setItem('userToken', response.token);
-            console.log(localStorage.getItem('userToken'));
-            this.router.navigateByUrl('/home');
-          } else {
-            console.log('Error' + response);
-          }
+          console.log(response);
+
+          // if (response.token) {
+          //   localStorage.setItem('userToken', response.token);
+          //   console.log(localStorage.getItem('userToken'));
+          //   this.router.navigateByUrl('/home');
+          // } else {
+          //   console.log('Error' + response);
+          // }
           this.editResponse = response.message;
           setTimeout(() => {
             this.renderer.removeClass(messageContianer, 'message-open');
             this.renderer.addClass(messageContianer, 'message-close');
-          }, 2000);
+            
+            if(response.error !== true){
+                this.router.navigateByUrl('/login');
+            }
+
+          }, 2500);
+
+          
         });
       }
     }

@@ -1,3 +1,6 @@
+::placeholder{
+    opacity:0.5;
+}
 .logo-wrapper img{
     width: 290px;
 }

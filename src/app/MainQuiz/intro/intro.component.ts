@@ -7,18 +7,28 @@ import { ServerserviceService } from '../../serverservice.service';
   styleUrls: ['./intro.component.css']
 })
 export class IntroComponent implements OnInit {
-  quiz = {};
+  quiz = {
+    name: '',
+    details: '',
+    description: ''
+  };
+  videopresent: boolean;
+  quizID;
+  quizQuestion = {};
   constructor(private serverservice: ServerserviceService) { }
 
   ngOnInit() {
-    this.serverservice.getquizcarddetails().subscribe((response: any) => {
-      for (const quiz of response) {
-        if (this.serverservice.mainQuizId === quiz._id) {
-          this.quiz = (quiz);
-          console.log(this.quiz);
-        }
-      }
-    });
-  }
+    this.quizID = this.serverservice.mainQuizId;
+    
+    if(this.quizID === null || this.quizID === undefined){
+      this.quizID = localStorage.getItem('quizID');
+    }
+    localStorage.setItem('quizID', this.quizID);
+    this.serverservice.getquizquestion(this.quizID).subscribe((response: any) => {
+      this.quiz = response[0]; 
+      // this.quizQuestion = response[0].quizObject;
 
+      // localStorage.setItem('quizData', this.quizQuestion);
+      });
+  }
 }

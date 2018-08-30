@@ -1,6 +1,7 @@
 import { Http, Response, RequestOptions } from '@angular/http';
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 import {map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
@@ -22,13 +23,14 @@ export class ServerserviceService  implements OnInit {
   mainQuizCounter = 0;
   MainQuizScore = 0;
   MainQuizName;
-  readonly _rootUrl = 'http://13.232.94.128';
-  readonly local = 'http://192.168.0.2:3000';
-  readonly _rootURL2 = 'http://13.232.94.128';
+  // readonly _rootUrl = 'http://13.232.94.128';
+  readonly _rootUrl = 'https://businesstoys.tech';
+  router: any;
   constructor(private http: HttpClient ) { }
   getToken(): string {
     return localStorage.getItem('token');
 }
+
   // currentModule () {
   //   this.currentModuleCounter ++;
   //   localStorage.setItem('currenModule', this.currentModuleCounter.toString());
@@ -51,12 +53,12 @@ export class ServerserviceService  implements OnInit {
     return this.http.get(this.CourseDetailsUrl);
   }
   // tslint:disable-next-line:member-ordering
-  QuizDetailsUrl = this.local + '/api/client/get-quiz';
-  getquizcarddetails() {
+  QuizDetailsUrl = this._rootUrl + '/api/client/get-quiz';
+  getQuizCards() {
     return this.http.get(this.QuizDetailsUrl);
   }
   sendQuizScore(data) {
-    console.log('shd');
+    // console.log('shd');
     console.log(data);
     return this.http.post(this._rootUrl + '/api/client/post-quizScore', data);
   }
@@ -116,9 +118,14 @@ export class ServerserviceService  implements OnInit {
   }
   sendModuleData(data) {
     console.log(data);
-    return this.http.post(this._rootURL2 + '/api/client/post-score', data);
+    return this.http.post(this._rootUrl + '/api/client/post-score', data);
   }
   getTempGameScore(data) {
     return this.http.post(this._rootUrl + '/api/client/get-tempScore', data);
+  }
+  isPlayed(data){
+    // console.log('check api called', data);
+    
+    return this.http.post(this._rootUrl + '/api/client/check-quiz', data)
   }
 }

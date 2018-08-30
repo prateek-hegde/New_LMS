@@ -381,10 +381,11 @@ export class HomeComponent implements OnInit {
         this.renderer.setStyle(this.loader, 'display', 'none');
       }, 1500);
     });
-    this.serverservice.getquizcarddetails().subscribe((response: any) => {
-      for (const course of response) {
-        console.log(response);
-        this.quiz.push(course);
+    this.serverservice.getQuizCards().subscribe((response: any) => {
+      // console.log(response);
+      let p = 1;
+      for (let q of response) {
+        this.quiz.push(q);
       }
       for (let i = 0; i < this.quiz.length; i++) {
         if (i % 4 === 0) {
