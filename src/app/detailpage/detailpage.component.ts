@@ -32,6 +32,7 @@ export class DetailpageComponent implements OnInit {
   valid = true;
   courseTakenFlag = 0;
   payment = false;
+  routeParams: any;
   constructor(public serverservice: ServerserviceService, public el: ElementRef,
     public renderer: Renderer2, public route: ActivatedRoute, public router: Router,
   private userState: UserStateService) { }
@@ -107,10 +108,13 @@ export class DetailpageComponent implements OnInit {
 
   ngOnInit() {
     this.currentModuleCounter = 0;
-    this.selectedCourseId = localStorage.getItem('courseId');
+    // this.selectedCourseId = localStorage.getItem('courseId');
+    this.routeParams = this.route.snapshot.params;
+    this.selectedCourseId = this.routeParams.courseID;
     this.serverservice.getSpecificCourse(this.selectedCourseId).subscribe((response: any) => {
       this.wholePageDetail = response;
       console.log(response);
+      console.log(this.wholePageDetail.details);
       this.serverservice.getEditData().subscribe((newresponse: any) => {
         for (const userdata of newresponse) {
           this.checkEnrollment(userdata.enrolments);

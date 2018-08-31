@@ -53,7 +53,7 @@
                   <div class="overlaywholecard">
                     <div class="title-icon-div">
                       <i class=" title-icons large material-icons pl-3">book</i>
-                      <i class=" title-icons large material-icons pl-3">share</i>
+                      <a [href]="'https://www.facebook.com/sharer/sharer.php?u=https://businesstoys.tech/detailpage' + card._id" target="_blank"><i class=" title-icons large material-icons pl-3">share</i></a>
                     </div>
                     <button class="overlaywholecard-pills-active" (click)="selectedCourse(card._id)">View</button>
                   </div>

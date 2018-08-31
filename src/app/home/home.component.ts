@@ -411,9 +411,10 @@ export class HomeComponent implements OnInit {
     });
 
   }
-  selectedCourse(intro) {
-    localStorage.setItem('courseId', intro);
-    this.router.navigate(['/detailpage']);
+  selectedCourse(courseID) {
+
+    localStorage.setItem('courseId', courseID);
+    this.router.navigate(['/detailpage', courseID]);
   }
   viewQuiz(id, name)  {
     this.serverservice.mainQuizId = id;

@@ -51,7 +51,7 @@ export const routes: Routes = [
   {path: 'edit' , component: EditinfoComponent},
   {path: 'login' , component: LoginComponent},
   {path: 'register' , component: RegisterComponent},
-  {path: 'detailpage' , component: DetailpageComponent},
+  {path: 'detailpage/:courseID' , component: DetailpageComponent},
   {path: 'moduleintro' , component: ModuleintroComponent},
   {path: 'quiz' , component: QuizComponent},
   {path: 'bgame' , component: BubblegameComponent},

@@ -90,6 +90,9 @@
     .user-avater-icon{
         font-size:80px;
     }
+    .user-name p{
+        font-size: 12px;
+    }
   
 }
 @media only screen and (min-width: 990px) {
@@ -99,6 +102,7 @@
     .filter{
         display: none;
     }
+
 
     /* Styles */
 }
