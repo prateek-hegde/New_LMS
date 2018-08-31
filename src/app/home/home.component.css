@@ -355,12 +355,7 @@ mycard:hover{
 .title-class-green{
     color:#056839 !important;
 }
-.title-icons{
-    padding: top 18px;
-    z-index:7;
-    /* display:none; */
-    font-size: 35px;
-}
+
 .card-description{
     padding-right:10px;
     padding-left: 10px;
@@ -403,7 +398,6 @@ mycard:hover{
     height:100%;
     background:rgba(0,0,0,0.85);
     z-index: -10;
-    /* display:none; */
     opacity:0;
     transition: opacity 0.2s ease-in;
 }
@@ -430,25 +424,23 @@ mycard:hover{
 .mycard:hover .overlaywholecard{
     opacity:1;
     z-index:300;
-    /* display: block; */
 }
 .mycard:hover .overlaywholecard button{
     transform: translateY(0);
-}       
-.mycard:hover .title-icons{
-    z-index:300;
-    /* display:block; */
-}
-.mycard:hover .title-icon-div{
-    display: block;
+}   
+.title-icons{
+    padding: top 18px;
+    z-index:7;
+    font-size: 35px;
 }
 .title-icon-div{
     position: absolute;
     color:white;
     top:50%;
-    display: none;
     left:50%;
     transform:translate(-50%,-50%);
+    /* transform: translateY(170px);
+    transition: 0.1s all ease-in; */
 }
 .filter-button-div{
     display:none;
@@ -599,5 +591,21 @@ mycard:hover{
         position: relative;
         overflow: hidden;
         transition: all 0.5 ease;
+    }
+    .mycard:hover .overlaywholecard button{
+        transform: translateY(0) translateX(-20px);
+    } 
+    .mycard:hover .title-icon-div{
+        transform: translateY(-15px) translateX(-62px);
+        /* transform: ; */
+    }
+    .title-icon-div{
+        position: absolute;
+        color:white;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        transform: translateY(170px);
+        transition: 0.1s all ease-in;
     }
 }
